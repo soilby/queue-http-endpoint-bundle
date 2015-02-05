@@ -1,0 +1,19 @@
+{
+    "name": "soil/queue-http-endpoint-bundle",
+    "version": "0.0.2",
+    "minimum-stability": "dev",
+    "dist": {
+        "url": "https://github.com/soilby/queue-http-endpoint-bundle",
+        "type": "vcs"
+    },
+    "autoload": {
+        "psr-4": {
+            "Soil\\QueueHttpEndpointBundle\\": "./"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": "2.6.*",
+        "soil/event-component": "dev-master"
+    }
+}
