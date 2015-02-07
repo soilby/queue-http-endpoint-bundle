@@ -1,0 +1,3 @@
+put_job:
+    path:     /put_job
+    defaults: { _controller: soil_queue_http_endpoint.controller.endpoint:putJobAction }

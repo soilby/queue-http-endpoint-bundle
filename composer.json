@@ -14,6 +14,6 @@
     "require": {
         "php": ">=5.4",
         "symfony/symfony": "2.6.*",
-        "soil/event-component": "dev-master"
+        "soil/event-bundle": "dev-master"
     }
 }

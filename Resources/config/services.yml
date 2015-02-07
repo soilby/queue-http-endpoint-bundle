@@ -1,0 +1,4 @@
+services:
+    soil_queue_http_endpoint.controller.endpoint:
+        class: Soil\QueueHttpEndpointBundle\Controller\EndpointController
+        arguments: [@soil_event.service.gearman_client, %queue_stream_name%]
