@@ -1,6 +1,6 @@
 <?php
 
-namespace Soil\EventProcessorBundle\DependencyInjection;
+namespace Soil\QueueHttpEndpointBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
