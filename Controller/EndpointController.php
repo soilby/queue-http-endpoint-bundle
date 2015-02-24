@@ -30,7 +30,7 @@ class EndpointController {
 
     public function putJobAction(Request $request) {
         try {
-            $data = $request->get('data');
+            $data = $request->getContent();
 
             $this->gearmanClient->send($this->queueStream, $data);
 
@@ -41,7 +41,8 @@ class EndpointController {
         catch(\Exception $e)    {
             $response = new JsonResponse([
                 'success' => false,
-                'error' => $e->getMessage()
+                'error' => $e->getMessage(),
+                'workload' => $data
             ], 500);
         }
 
