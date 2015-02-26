@@ -29,13 +29,17 @@ class EndpointController {
 
 
     public function putJobAction(Request $request) {
+        $data = null;
+
         try {
             $data = $request->getContent();
 
-            $this->gearmanClient->send($this->queueStream, $data);
+            $job = $this->gearmanClient->send($this->queueStream, $data);
 
             $response = new JsonResponse([
-                'success' => true
+                'success' => true,
+                'stream' => $this->queueStream,
+                'job' => $job
             ]);
         }
         catch(\Exception $e)    {
