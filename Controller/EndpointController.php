@@ -34,7 +34,7 @@ class EndpointController {
         try {
             $data = $request->getContent();
 
-            $job = $this->gearmanClient->send($this->queueStream, $data);
+            $job = $this->gearmanClient->sendRaw($this->queueStream, $data);
 
             $response = new JsonResponse([
                 'success' => true,
